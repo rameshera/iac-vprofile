@@ -43,13 +43,13 @@ jobs:
           # -backend-config="region=${{ env.aws_regiomn }}" \
           # -backend-config="key=terraform.tfstate"
 
-      #  - name: Terraform format
-      #    id: fmt
-      #    run: terraform fmt -check
+       - name: Terraform format
+         id: fmt
+         run: terraform fmt -check
 
-      #  - name: Terraform validate
-      #    id: validate
-      #    run: terraform validate
+       - name: Terraform validate
+         id: validate
+         run: terraform validate
 
 
       - name: Terraform Plan
