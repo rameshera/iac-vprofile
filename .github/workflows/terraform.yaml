@@ -14,7 +14,7 @@ on:
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  
+
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
   aws_regiomn: us-east-1
   EKS_CLUSTER_NAME: vprofile-cluster
@@ -39,7 +39,7 @@ jobs:
       - name: Terraform Init
         working-directory: ./terraform
         id: init
-        run: terraform init -backend-config="bucket=$BUCKET_TF_STAT"
+        run: terraform init -backend-config="bucket=$BUCKET_TF_STATE"
           # -backend-config="region=${{ env.aws_regiomn }}" \
           # -backend-config="key=terraform.tfstate"
 
