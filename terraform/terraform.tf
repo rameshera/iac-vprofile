@@ -14,8 +14,8 @@ terraform {
 
     tls = {
       source  = "hashicorp/tls"
-      version = "~> 4.0.4"
-      # version = "~> 4.1.0"
+      # version = "~> 4.0.4"
+      version = "~> 4.1.0"
     }
 
     cloudinit = {
