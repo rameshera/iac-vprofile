@@ -22,7 +22,8 @@ terraform {
 
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.23.0"
+      #version = "~> 2.23.0"
+      version = "~> 3.0.1"
     }
   }
 
@@ -32,7 +33,7 @@ terraform {
     region = "us-east-1"
   }
 
-  required_version = "~> 1.6.3"
+  #required_version = "~> 1.6.3"
 }
 ##
 ##
