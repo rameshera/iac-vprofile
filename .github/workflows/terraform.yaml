@@ -36,12 +36,12 @@ jobs:
       #   # with:
       #   #   terraform_version: 1.7.5
 
-      # - name: Terraform Init
-      #   working-directory: ./terraform
-      #   id: init
-      #   run: terraform init -backend-config="bucket=$BUCKET_TF_STATE"
-      #     # -backend-config="region=${{ env.aws_regiomn }}" \
-      #     # -backend-config="key=terraform.tfstate"
+      - name: Terraform Init
+        working-directory: ./terraform
+        id: init
+        run: terraform init -backend-config="bucket=$BUCKET_TF_STATE"
+          # -backend-config="region=${{ env.aws_regiomn }}" \
+          # -backend-config="key=terraform.tfstate"
 
       #  - name: Terraform format
       #    id: fmt
