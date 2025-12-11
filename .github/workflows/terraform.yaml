@@ -25,17 +25,19 @@ jobs:
     defaults:
       run:
         shell: bash
+        working-directory: ./terraform
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         # with:
         #   terraform_version: 1.7.5
 
       - name: Terraform Init
         working-directory: ./terraform
+        id: init
         run: terraform init \
           -backend-config="bucket=${{ env.BUCKET_TF_NAME }}" \
           -backend-config="region=${{ env.aws_regiomn }}" \
